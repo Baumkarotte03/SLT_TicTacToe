@@ -12,9 +12,6 @@ public class TicTacToe {
     private void switchCurrentPlayer(){}
 
     private boolean hasWinner(){
-
         return true;
     }
-
-
 }
