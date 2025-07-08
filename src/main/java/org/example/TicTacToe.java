@@ -22,10 +22,16 @@ public class TicTacToe {
         for(int i = 0; i < 9; i++){
             board.print();
             System.out.println("Current Player: " + currentplayer.getMarker());
-            System.out.println("please enter x");
+            System.out.println("please enter x coordinate");
             tempx = sc.nextInt();
-            System.out.println("please enter y");
+            if(tempx < 0 || tempx > 2){
+                System.out.println("Invalid coordinate");
+            }
+            System.out.println("please enter y coordinate");
             tempy = sc.nextInt();
+            if(tempy < 0 || tempy > 2){
+                System.out.println("Invalid coordinate");
+            }
             while (!board.isCellEmpty(tempx, tempy)) {
                 System.out.println("please enter x again");
                 tempx = sc.nextInt();
