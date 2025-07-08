@@ -22,9 +22,9 @@ public class TicTacToe {
         for(int i = 0; i < 9; i++){
             board.print();
             System.out.println("Current Player: " + currentplayer.getMarker());
-            System.out.println("please enter x");
+            System.out.println("please row coordinate");
             tempx = sc.nextInt();
-            System.out.println("please enter y");
+            System.out.println("please column coordinate");
             tempy = sc.nextInt();
             while (!board.isCellEmpty(tempx, tempy)) {
                 System.out.println("please enter x again");
@@ -38,8 +38,7 @@ public class TicTacToe {
                 System.out.println(currentplayer.getMarker() + " wins!");
                 board.clear();
                 break;
-            }
-            else if(board.isFull()){
+            }else if(board.isFull()){
                 System.out.println("no winner!");
                 board.clear();
                 break;
@@ -51,8 +50,7 @@ public class TicTacToe {
     private void switchCurrentPlayer(){
         if(currentplayer == player1){
             currentplayer = player2;
-        }
-        else if(currentplayer == player2){
+        }else if(currentplayer == player2){
             currentplayer = player1;
         }
     }
