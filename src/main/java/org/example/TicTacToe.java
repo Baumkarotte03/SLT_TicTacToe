@@ -24,12 +24,12 @@ public class TicTacToe {
             System.out.println("Current Player: " + currentplayer.getMarker());
             System.out.println("please enter x coordinate");
             tempx = sc.nextInt();
-            if(tempx < 0 || tempx > 2){
+            if (tempx < 0 || tempx > 2) {
                 System.out.println("Invalid coordinate");
             }
             System.out.println("please enter y coordinate");
             tempy = sc.nextInt();
-            if(tempy < 0 || tempy > 2){
+            if (tempy < 0 || tempy > 2) {
                 System.out.println("Invalid coordinate");
             }
             while (!board.isCellEmpty(tempx, tempy)) {
